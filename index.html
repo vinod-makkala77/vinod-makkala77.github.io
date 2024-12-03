@@ -2,10 +2,17 @@
 <html>
   <head>
     <style>
+      /* *{
+        margin: 0px;
+      } */
       img {
         width: 200px;
         height: 200px; 
         object-fit: cover; 
+        display: flex;
+        justify-content:left;
+        border-radius: 10px;
+        padding-left:10px;
       }
       <div>{
         background-color: bisque;
@@ -20,14 +27,95 @@
         background-color: aquamarine;
         color: brown;
       }
+      .head0{
+        display: flex;
+        justify-content: space-between;
+        background-color: bisque;
+      }
+      li{
+        display: inline-block;
+        padding: 10px;
+        font-size: larger;
+      }
+      a:hover{
+        text-decoration: none;
+      }
+      .head1{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 40px;
+        padding: 40px;
+      }
+      .info{
+        text-align: justify;
+      }
+      .p1{
+        border: 2px solid #008cba; 
+        border-radius: 10px
+      }
+      .projects{
+        display: flex;
+        
+      }
+      .head2{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+        padding: 10px;
+      }
     </style>
   </head>
   <body>
-    <div>    <h1>This Is Sample heading</h1>
-    <img src="https://is.gd/VTwp2m" alt="Image not found">
-    <br><p> h=this is sample</p>
-    <h2>my projects</h2>
-    <a href="https://vinod-makkala77.github.io/onlinestore/">onlinestore</a>
+    <div class="container">
+      <div class="head0">
+          <div> <h1>Vinod Makkala</h1></div>
+          <div>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Projects</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <br><br><br>
+      <div class="head1">
+        <div class="info">
+          <h1><b>Full Stack Developer</b></h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+             Nesciunt neque est nihil ipsum error. Deserunt voluptas explicabo ea eum quasi.<br>
+              Rem nisi molestias quia nesciunt incidunt numquam fugiat perferendis assumenda?<br><br>
+
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt <br>
+             neque est nihil ipsum error. Deserunt voluptas explicabo ea eum quasi.<br>
+              Rem nisi molestias quia nesciunt incidunt numquam fugiat perferendis assumenda?<br>
+          </p>
+        </div>
+        <div class="img">
+         <img src="assets/images/vinod.jpg" alt="Image not found">
+        </div>
     </div>
+    <div>
+      <div class="head1"><h1>My Projects</h1></div>
+      <div class="head2">
+        <div class="p1"><p> Project1:<br><a href="https://vinod-makkala77.github.io/onlinestore/">onlinestore</a></p></div>
+        <div class="p1"><p>project 2</p></div>
+        <div class="p1"><p> project 2</p></div></div>
+    </div><br>
+    <div class="head2">
+      <div class="p1"><p>project 3</p></div>
+      <div class="p1"><p>project 4</p></div>
+      <div class="p1"><p> project 5</p></div></div>
+
+    <div class="head1"><h1>Sezrvices</h1></div>
+    <div><h1>Web App Development</h1><br><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quia nobis eligendi reiciendis. Esse a possimus eum est veritatis aliquid ut eveniet. Et illum odio ut voluptates molestiae? Perspiciatis, ab.</p></div>
+    <div><h1>Web App Development</h1><br><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quia nobis eligendi reiciendis. Esse a possimus eum est veritatis aliquid ut eveniet. Et illum odio ut voluptates molestiae? Perspiciatis, ab.</p></div>
+    <div><h1>Web App Development</h1><br><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quia nobis eligendi reiciendis. Esse a possimus eum est veritatis aliquid ut eveniet. Et illum odio ut voluptates molestiae? Perspiciatis, ab.</p></div>
+ 
+  </div>
   </body>
 </html>
