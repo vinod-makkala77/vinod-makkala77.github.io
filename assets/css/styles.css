@@ -1,0 +1,64 @@
+.container {
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    scroll-behavior: smooth;
+    height: 100%;
+  }
+
+  .header-row {
+    background-color: rgba(0, 0, 0, 0.11);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+  }
+
+  .header-row .box {
+    padding: 10px;
+  }
+
+  .header-row li {
+    display: inline;
+    padding: 5px;
+    font-size: larger;
+  }
+
+  .header-row a {
+    text-decoration: none;
+  }
+
+  .header-row a:hover {
+    text-decoration: underline;
+  }
+
+  .row {
+    padding: 100px;
+    height: 75%;
+    background-image:url("https://imgs.search.brave.com/VAXfmF_DUwwKK3nI_TZcl4V2UPYX4pjB_jIxfr8-XBI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNTg1/Nzk4MTMyL3Bob3Rv/L3NoYWRvd3Mtb2Yt/Zmxvd2Vycy1vbi1h/LXdoaXRlLXNlbWkt/dHJhbnNwYXJlbnQt/Y2xvdGguanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPUNCVzdv/VWp5WmpVM3QtZUZ0/bGlERFBrclluSnRu/TEg1M2g0Y1NSd3Vk/ZVE9");
+  }
+
+  .row .box {
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .footer {
+    padding: 20px;
+    margin: 0px;
+    background-color: black;
+    color: white;
+    font-size: large;
+  }
+
+  button {
+    background-color:gray;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 10%;
+  }
