@@ -16,10 +16,12 @@
     align-items: center;
     position: sticky;
     top: 0px;
+    
   }
+ 
 
   .header-row .box {
-    padding: 10px;
+    padding: 2px;
   }
 
   .header-row li {
@@ -31,20 +33,23 @@
   .header-row a {
     text-decoration: none;
   }
-
-  .header-row a:hover {
+  a{
+    text-decoration: none;
+  }
+  
+  .header-row  {
     text-decoration: underline;
   }
 
   .row {
-    padding: 100px;
-    height: 75%;
+    padding: 50px;
+    height: 55%;
     background-image: url("http://ts2.mm.bing.net/th?id=OIP.3mERxqPgQkkaKco8jP7nQwHaE8&pid=15.1");
   }
 
   .row .box {
-    padding: 20px;
-    margin: 10px;
+    padding: 10px;
+    margin: 5px;
   }
 
   .footer {
@@ -55,10 +60,27 @@
     font-size: large;
   }
 
-  button {
+  button a{
     background-color: teal;
     padding: 10px;
     color: white;
-    border: none;
+    border:red;
     border-radius: 10%;
+    box-shadow: grey;
+  }
+  .box3{
+    border: 5px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px black;
+    transition-property: transform;
+    transition-duration: 0.5s;
+  }
+  .box3:hover{
+    transform: scale(1.2,1.2);
+  }
+  button:hover{
+    transform: scale(1.2,1.2);
+  }
+  h1{
+    color: darkslategray;
   }
