@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function f1(){
+           let n1=document.getElementById("num1").value;
+           let n2=document.getElementById("num2").value;
+           let n3=(document.getElementById("num3").value);
+           let n4=(document.getElementById("num4").value);
+           mss1.innerHTML=n1+" "+"|"+n2+" "+"|"+n3+" "+"|"+n4;
+        }
+    </script>
+</head>
+<body>
+    <style>
+        .head{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+    </style>
+    <div class="head">
+    <input type="text" id="num1" >
+    <input type="text" id="num2">
+    <input type="text" id="num3" >
+    <input type="text" id="num4" >
+    <button onclick="f1()">submit</button>
+    <hr>
+    <div id="mss1"></div>
+    <div id="mss2"></div>
+    <div id="mss3"></div>
+    <div id="mss4"></div>
+</div>
+</body>
+</html>

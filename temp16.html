@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <script>
+        function f1(event) {
+            event.preventDefault(); 
+            let n = document.getElementById("n1").value;
+            let m = document.getElementById("n2").value;
+            document.getElementById("msg").innerHTML = `Email: ${n}, Password: ${m}`;
+        }
+    </script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .head {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .head input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: block;
+        }
+
+        .head button {
+            width: 100%;
+            padding: 10px;
+            background: #007BFF;
+            color: white;
+            border:20px
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .head button:hover {
+            background: #0056b3;
+        }
+
+        #msg {
+            margin-top: 10px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <form onsubmit="f1(event)">
+            <input type="text" placeholder="Enter the email" required id="n1">
+            <input type="password" placeholder="Password" required id="n2">
+            <button type="submit">Log In</button>
+        </form>
+        <div id="msg"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function f1(){
+            let m=document.getElementById("n1").value
+            let n=document.getElementById("n2").value
+            let o=document.getElementById("n3").value
+            let p=document.getElementById("n4").value
+            msg.innerHTML=`"Name="${m},"Email="${n},"Password="${o},"Date="${p}`
+        }
+    </script>
+</head>
+<body>
+    <style>
+        .head{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .border{
+            border: 2px solid;
+            padding: 20px;
+        }
+       
+    </style>
+    <div class="head">
+            <h1>New User Signup Form</h1><br>
+            <div class="border">
+            <input class="pa" type="text" required id="n1" placeholder="Name"><br><br>
+            <input class="pa" type="text" required id="n2" placeholder="Email"><br><br>
+            <input class="pa" type="password" required id="n3" placeholder="Password"><br><br>
+            <input class="pa" type="date" required id="n4" placeholder="Date Of Birth"><br><br>
+            <button class="bu" type="button" onclick="f1()">Submit</button>
+            </div>
+        <div id="msg"></div>
+    </div>
+    
+</body>
+</html>

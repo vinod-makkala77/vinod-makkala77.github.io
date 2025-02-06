@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+        <style>
+            .container{
+                display: flex;
+                justify-content: center;
+                padding: 20px;
+            }
+            .box{
+                margin: auto;
+                border: 2px solid green ;
+                background-color:darkgrey;
+                padding: 20px;
+            }
+                
+        </style>
+        <div id="root"></div>
+        <script>
+      let products = [
+        { id: 1, name: "product 1", num: 111, desc: "this is a sample",url:"https://picsum.photos/id/1/200/200" },
+        { id: 2, name: "product 2", num: 222, desc: "this is a sample",url:"https://picsum.photos/id/2/200/200" },
+        { id: 3, name: "product 3", num: 333, desc: "this is a sample" , url:"https://picsum.photos/id/4/200/200"},
+        { id: 4, name: "product 4", num: 444, desc: "this is a sample",url:"https://picsum.photos/id/6/200/200"},
+      ];
+      let l=products.length
+      let str="<div class='container'>"
+      for(let i=0;i<l;i++){
+        str+=`<div class='box'> 
+            <img src=${products[i].url}>
+            <h2>${products[i].name} </h2>
+            <h2>${products[i].id} </h2>
+            <p>${products[i].desc} </p>
+            <h2>${products[i].num} </h2>
+            <button>Add to cart</button>
+            </div>`
+      }
+      root.innerHTML=str
+    //   console.log(products[0]);
+    </script>
+  </body>
+</html>

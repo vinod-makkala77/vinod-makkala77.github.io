@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function f1(){
+            let n=document.getElementById("num").value;
+            let res=""
+            for(var i=1;i<=10;i++){
+                res+=`${n}*${i}=${n*i}<br>`;
+                mssg.innerHTML=res;
+            }
+        }
+    </script>
+</head>
+<body>
+    <style>
+        .head{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            flex-direction: column;
+            background-color: aquamarine;
+        }
+        .head1{
+            padding: 20px;
+            flex-direction: column;
+        }
+        button:hover{
+            background-color: aquamarine;
+            transform: matrix3d();
+            text-transform: uppercase;
+        }
+    </style>
+    <div class="head">
+    <input type="number" id="num" required style="background-color: aqua;";><br><br>
+    <button onclick="f1()">submit</button>
+    <br>
+    <div class="head1" id="mssg"></div>
+</div>
+</body>
+</html>
