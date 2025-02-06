@@ -1,3 +1,10 @@
+arrow_back
+vinod-makkala77.github.io.zip
+code Highlight Syntax
+skip_previous skip_next close
+code
+styles.css (2 KB)
+file_download Download Save to Drive Save to Drive more_vert
 .container {
     position: fixed;
     overflow: auto;
@@ -10,16 +17,18 @@
   }
 
   .header-row {
-    background-color: rgba(0, 0, 0, 0.11);
+    background-color: rgb(167, 106, 106);
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0px;
+    
   }
+ 
 
   .header-row .box {
-    padding: 10px;
+    padding: 2px;
   }
 
   .header-row li {
@@ -31,20 +40,23 @@
   .header-row a {
     text-decoration: none;
   }
-
-  .header-row a:hover {
+  a{
+    text-decoration: none;
+  }
+  
+  .header-row  {
     text-decoration: underline;
   }
 
   .row {
-    padding: 100px;
-    height: 75%;
-    background-image:url("https://imgs.search.brave.com/VAXfmF_DUwwKK3nI_TZcl4V2UPYX4pjB_jIxfr8-XBI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNTg1/Nzk4MTMyL3Bob3Rv/L3NoYWRvd3Mtb2Yt/Zmxvd2Vycy1vbi1h/LXdoaXRlLXNlbWkt/dHJhbnNwYXJlbnQt/Y2xvdGguanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPUNCVzdv/VWp5WmpVM3QtZUZ0/bGlERFBrclluSnRu/TEg1M2g0Y1NSd3Vk/ZVE9");
+    padding: 50px;
+    height: 55%;
+    background-image: url("http://ts2.mm.bing.net/th?id=OIP.3mERxqPgQkkaKco8jP7nQwHaE8&pid=15.1");
   }
 
   .row .box {
-    padding: 20px;
-    margin: 10px;
+    padding: 10px;
+    margin: 5px;
   }
 
   .footer {
@@ -55,10 +67,27 @@
     font-size: large;
   }
 
-  button {
-    background-color:gray;
+  button a{
+    background-color: teal;
     padding: 10px;
     color: white;
-    border: none;
+    border:red;
     border-radius: 10%;
+    box-shadow: grey;
+  }
+  .box3{
+    border: 5px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px black;
+    transition-property: transform;
+    transition-duration: 0.5s;
+  }
+  .box3:hover{
+    transform: scale(1.2,1.2);
+  }
+  button:hover{
+    transform: scale(1.2,1.2);
+  }
+  h1{
+    color: darkslategray;
   }
