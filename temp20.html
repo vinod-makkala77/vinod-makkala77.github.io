@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let users=[];
+        function del(index){
+            users.splice(index,1);
+            display();
+        }
+        function display(){
+            let len=users.length;
+                let str="";
+                for(let i=0;i<len;i++){
+                    str+=`<div>
+                        ${users[i].name}|
+                        ${users[i].pass}|
+                        ${users[i].dob}|
+                        <button onclick='del(${i})'>delete</button> 
+                        </div><br>`
+                }
+                msg.innerHTML=str
+        }
+        function f1(){
+                name=document.getElementById("n1").value,
+                password=document.getElementById("n2").value,
+                date=document.getElementById("n3").value
+
+                // msg.innerHTML+=`${name},${password},${date}`
+                let user={
+                    name:name,
+                    pass:password,
+                    dob:date
+                }
+                users.push(user)
+                display()
+        }
+    </script>
+</head>
+<body>
+    <style>
+        .head{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+            border: 2px solid;
+            background-image:url('https://picsum.photos/id/100/200/300') ;
+        }
+        .head1{
+            /* border: 2px solid brown; */
+            background-color: url('https://picsum.photos/id/242/200/300');
+            border-color: aquamarine;
+            background-color:azure;
+
+        }
+    </style>
+    <h1>User SignUp</h1>
+    <div class="head">
+    <input  type="text" id="n1" placeholder="name"><br><br>
+    <input type="password"  id="n2" placeholder="password"><br><br>
+    <input type="Date" id="n3" placeholder="date"><br><br>
+    <button onclick="f1()">submit</button>
+    <div id="msg" class="head1"></div>
+</div>
+</body>
+</html>
