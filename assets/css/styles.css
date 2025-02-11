@@ -60,6 +60,9 @@
     color: white;
     font-size: large;
   }
+  .img{
+    border-radius: 50%;
+  }
 
   button a{
     background-color: teal;
