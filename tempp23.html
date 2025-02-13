@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Shopping Cart</title>
     <script>
       const products = [
         { id: 1, name: "P1", price: 25 },
@@ -12,66 +11,88 @@
         { id: 3, name: "P3", price: 30 },
       ];
       const cart = {};
+
       const addToCart = (id) => {
-      //   const score={};
-      //   score["maths"]=95;
-      //   score["maths"]+=2;
-      //   console.log(score);
-      //  console.log(score);
-        cart[id] = 1;
-        console.log(cart);
+        cart[id] = (cart[id] || 0) + 1;
         showCart();
       };
-      const add=(id)=>{
-        cart[id]=cart[id]+1;
+
+      const add = (id) => {
+        cart[id] += 1;
         showCart();
-      }
-      const sub=(id)=>{
-        if(cart[id]>=1){
-          cart[id]-=1;
+      };
+
+      const sub = (id) => {
+        if (cart[id] > 1) {
+          cart[id] -= 1;
+        } else {
+          delete cart[id];
         }
         showCart();
-      }
-      const total = () => {
-        const totalPrice = products.reduce((sum, value) => {
-          if (cart[value.id]) {
-            return sum + value.price * cart[value.id];
-          }
-          return sum;
-        }, 0);
-        document.getElementById("divtotal").innerHTML = `Total: $${totalPrice}`;
       };
-      
+
+      const total = () => {
+        const totalPrice = products.reduce(
+          (sum, value) => sum + value.price * (cart[value.id] || 0),
+          0
+        );
+        document.getElementById("divtotal").innerHTML = `Order Value: $${totalPrice}`;
+      };
+
+      const displayCart = () => {
+        document.getElementById("divCartBlock").style.display = "block";
+      };
+
       const showCart = () => {
         let str = "";
-        products.map((value) => {
+        products.forEach((value) => {
           if (cart[value.id]) {
             str += `
-            <li>${value.name}-$${value.price}-<button onclick="sub(${value.id})">-</button>${cart[value.id]}<button onclick="add(${value.id})">+</button>-${value.price*cart[value.id]}</li>
+            <li>${value.name} - $${value.price} 
+            <button onclick="sub(${value.id})">-</button> 
+            ${cart[value.id]} 
+            <button onclick="add(${value.id})">+</button> 
+            - $${value.price * cart[value.id]}
+            </li>
             `;
           }
         });
-        divCart.innerHTML = str;
+        document.getElementById("divCart").innerHTML = str;
+
+        // Corrected total count
+        const totalCount = Object.values(cart).reduce((sum, val) => sum + val, 0);
+        document.getElementById("divcount").innerHTML = totalCount;
+
         total();
       };
+      const hideCart = () =>{
+        divCartBlock.style.display="none"
+      }
+
       const showProducts = () => {
         let str = "";
-        products.map((value) => {
+        products.forEach((value) => {
           str += `
-          <li>${value.id}-${value.name}-${value.price}-<button onclick=addToCart(${value.id})>Add to Cart</button></li>
+          <li>${value.name} - $${value.price} 
+          <button onclick="addToCart(${value.id})">Add to Cart</button></li>
           `;
         });
-        divProducts.innerHTML = str;
+        document.getElementById("divProducts").innerHTML = str;
       };
     </script>
   </head>
   <body onload="showProducts()">
     <h1>My Store</h1>
+    <h4 onclick="displayCart()">Cart: <span id="divcount">0</span></h4>
     <hr />
     <h3>Products</h3>
     <div id="divProducts"></div>
-    <h3>My Cart</h3>
-    <div id="divCart"></div>
-    <div id="divtotal"></div>
+
+    <div id="divCartBlock" style="display: none;">
+      <h3>My Cart</h3>
+      <div id="divCart"></div>
+      <div id="divtotal"></div>
+      <button onclick="hideCart()">close</button>
+    </div>
   </body>
 </html>

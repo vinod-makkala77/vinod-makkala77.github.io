@@ -32,13 +32,17 @@
       };
 
       const total = () => {
-        const totalPrice = products.reduce((sum, product) => {
+        let totalPrice = 0;
+        let totalCount = 0;
+
+        products.forEach((product) => {
           if (cart[product.id]) {
-            return sum + product.price * cart[product.id];
+            totalPrice += product.price * cart[product.id];
+            totalCount += cart[product.id];
           }
-          return sum;
-        }, 0);
-        document.getElementById("divtotal").innerHTML = `Total: $${totalPrice}`;
+        });
+
+        document.getElementById("divtotal").innerHTML = `Total Items: ${totalCount} | Total Price: $${totalPrice}`;
       };
 
       const showCart = () => {
