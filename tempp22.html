@@ -7,14 +7,28 @@
 </head>
 <body>
     <script>
-        const prod=["apple","orange","mango"];
-        prod.forEach((value)=> console.log(value));
-        prod.forEach((value)=>{
-            console.log("hello world");
-            console.log(value)
-        });
+        // const prod=["apple","orange","mango"];
+        // prod.forEach((value,index,arr)=>{
+        //     console.log(index+1,value);
+        // });
 
+        // const ar=[1,2,3,4,5]
+        // const newar=ar.map(val=>{return val+10})
+        // console.log(newar)
+
+         const prod=["apple","orange","mango"];
+        //  const newp= prod.map((value,index,arr)=>{ return index+1,value });
+        // console.log(newp)
+        const num1=[1,2,3,4,5]
+        // const newnum=num1.map(val=>val+10)
+        // console.log(newnum)
+        // prod.forEach((val,index,arr)=>console.log(index,val,arr))
+        // const fil=num1.filter(val=>val>2)
+        // console.log(fil)
+        const fin=num1.find(val=>val==3)
+        console.log(fin);
+        // const filt=num1.filter(val=>val==3)
+        // console.log(filt)
     </script>
-    
 </body>
 </html>

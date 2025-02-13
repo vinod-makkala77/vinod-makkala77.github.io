@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <script>
+      const products = [
+        { id: 1, name: "P1", price: 25 },
+        { id: 2, name: "P2", price: 45 },
+        { id: 3, name: "P3", price: 30 },
+      ];
+      const cart = {};
+
+      const addToCart = (id) => {
+        cart[id] = (cart[id] || 0) + 1;
+        showCart();
+      };
+
+      const sub = (id) => {
+        if (cart[id] > 1) {
+          cart[id] -= 1;
+        } 
+        showCart();
+      };
+
+      const showCart = () => {
+        let str = "";
+        products.forEach((value) => {
+          if (cart[value.id]) {
+            str += `
+            <li>${value.name} - $${value.price} 
+              <button onclick="sub(${value.id})">-</button> 
+              ${cart[value.id]} 
+              <button onclick="addToCart(${value.id})">+</button> 
+              - $${value.price * cart[value.id]}
+            </li>`;
+          }
+        });
+        document.getElementById("divCart").innerHTML = str;
+      };
+
+      const showProducts = () => {
+        let str = "";
+        products.forEach((value) => {
+          str += `
+          <li>${value.name} - $${value.price} 
+          <button onclick="addToCart(${value.id})">Add to Cart</button></li>`;
+        });
+        document.getElementById("divProducts").innerHTML = str;
+      };
+    </script>
+  </head>
+  <body onload="showProducts()">
+    <h1>My Store</h1>
+    <hr />
+    <h3>Products</h3>
+    <ul id="divProducts"></ul>
+    <h3>My Cart</h3>
+    <ul id="divCart"></ul>
+  </body>
+</html>
