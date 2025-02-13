@@ -17,11 +17,28 @@
         showCart();
       };
 
+      const add = (id) => {
+        cart[id] += 1;
+        showCart();
+      };
+
       const sub = (id) => {
         if (cart[id] > 1) {
           cart[id] -= 1;
-        } 
+        } else {
+          delete cart[id];
+        }
         showCart();
+      };
+
+      const total = () => {
+        const totalPrice = products.reduce((sum, product) => {
+          if (cart[product.id]) {
+            return sum + product.price * cart[product.id];
+          }
+          return sum;
+        }, 0);
+        document.getElementById("divtotal").innerHTML = `Total: $${totalPrice}`;
       };
 
       const showCart = () => {
@@ -29,23 +46,26 @@
         products.forEach((value) => {
           if (cart[value.id]) {
             str += `
-            <li>${value.name} - $${value.price} 
+              <li>${value.name} - $${value.price} 
               <button onclick="sub(${value.id})">-</button> 
               ${cart[value.id]} 
-              <button onclick="addToCart(${value.id})">+</button> 
+              <button onclick="add(${value.id})">+</button> 
               - $${value.price * cart[value.id]}
-            </li>`;
+              </li>
+            `;
           }
         });
         document.getElementById("divCart").innerHTML = str;
+        total();
       };
 
       const showProducts = () => {
         let str = "";
         products.forEach((value) => {
           str += `
-          <li>${value.name} - $${value.price} 
-          <button onclick="addToCart(${value.id})">Add to Cart</button></li>`;
+            <li>${value.name} - $${value.price} 
+            <button onclick="addToCart(${value.id})">Add to Cart</button></li>
+          `;
         });
         document.getElementById("divProducts").innerHTML = str;
       };
@@ -55,8 +75,9 @@
     <h1>My Store</h1>
     <hr />
     <h3>Products</h3>
-    <ul id="divProducts"></ul>
+    <div id="divProducts"></div>
     <h3>My Cart</h3>
-    <ul id="divCart"></ul>
+    <div id="divCart"></div>
+    <div id="divtotal"></div>
   </body>
 </html>
