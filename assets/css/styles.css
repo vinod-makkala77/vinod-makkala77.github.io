@@ -79,6 +79,8 @@
     box-shadow: 2px 2px 2px 2px black;
     transition-property: transform;
     transition-duration: 0.5s;
+    width: 5000px;
+    height: 200px;
   }
   .box3:hover{
     transform: scale(1.2,1.2);
@@ -88,4 +90,9 @@
   }
   h1{
     color: darkslategray;
+  }
+  .present{
+    display: flex;
+    margin: auto;
+    padding: 20px;
   }
