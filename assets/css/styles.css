@@ -101,3 +101,20 @@
     color: cornflowerblue;
     background-color:cornflowerblue;
   }
+  a, a:visited, a:hover, a:focus {
+    text-decoration: none;
+  }
+  .about{
+    font-size: 20px;
+  }
+  .ver{
+    top: 0px;
+    right: 20px;
+    transition:cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .divide{
+    display: flex;
+    justify-content: space-around;
+  
+
+  }

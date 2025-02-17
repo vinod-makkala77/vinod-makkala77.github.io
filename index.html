@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Name</title>
-    <link rel="icon" type="image/x-icon" href="assets/images/ball.png" />
+    <title>Vinod Makkala</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png" />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
@@ -13,7 +13,7 @@
         <div class="box"><h2><marquee direction="down">VINOD MAKKALA</marquee></h2></div>
         <div class="box">
           <ul>
-            <li><a href="#home">Home</a></li>
+            <li><a href="#home" style="text-decoration: none;">Home</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#about">About</a></li>
@@ -25,7 +25,7 @@
 
       <div class="row" id="home">
         <div style="display: flex;padding-top: 50px;">
-          <div class="box">
+          <div class="box about">
             <h1>Full Stack Developer</h1>
             <p><i>
               As a passionate Full Stack Web Developer, I specialize in creating dynamic, user-friendly web applications that bridge the gap between front-end aesthetics and back-end functionality. I enjoy taking an idea from concept to deployment and continuously improving my skills in both front-end and back-end technologies
@@ -33,8 +33,9 @@
             <p><i>
               I believe in writing clean maintainable code that is both scalable and efficient. My development approach includes clear documentation, rigorous testing, and following best practices such as the DRY principle (Don’t Repeat Yourself). I also emphasize the importance of staying updated with industry trends and am always exploring new frameworks, libraries, and tools to enhance my workflows.
             </i></p>
-            <button>Button 1</button>
-            <button>Button 1</button>
+            <button onclick="window.location.href='https://github.com/vinod-makkala77';" title="Click this button to see my GitHub ">My Github</button>
+<button onclick="window.location.href='https://in.linkedin.com/in/vinod-makkala-9a6917275';" title="Click this buttonto see my LinkedIn Profile">My LinkedIn</button>
+
           </div>
           <div class="box">
             <img src="assets/images/vinnu (2).jpg" width="400" height="420" class="img" />
@@ -45,28 +46,28 @@
       <div id="projects" class="row" style="background-color: lightcoral">
         <h1>Projects</h1>
         <div class="present">
-          <div class="box box3" style="background-color:darkgrey;">
+          <div class="box box3 about" style="background-color:darkgrey;">
             <h3>Project 1</h3>
             <p><i>
-              Welcome to Our Online Store, your premier destination for a wide range of high-quality products at affordable prices!<br><br><br>
+              Welcome to Our Online Store, your premier destination for a wide range of high-quality products at affordable prices!<br><br>
               <a href="https://vinod-makkala77.github.io/onlinestore/" style="color: red;"><div class="hov">CLICK HERE</div></a>
             </i></p>
           </div>
 
-          <div class="box box3" style="background-color: darkgray;">
+          <div class="box box3 about" style="background-color: darkgray;">
             <h3>Project 2</h3>
             <p><i>
               Users to create accounts, log in,
                and perform basic financial transactions such as deposits,
-                withdrawals, and money transfers.</i><br><br><br>
+                withdrawals, and money transfers.</i><br><br>
               <a href="https://vinod-makkala77.github.io/mybank/" style="color: red;"><i><div class="hov">CLICK HERE</div></i></a></i>
             </p>
           </div>
 
-          <div class="box box3" style="background-color: darkgray;">
+          <div class="box box3 about" style="background-color: darkgray;">
             <h3>Project 3</h3>
             <p><i>
-              Welcome to Our Online Store, your premier destination for a wide range of high-quality products at affordable prices!(Java Script)</i><br><br><br>
+              Welcome to Our Online Store, your premier destination for a wide range of high-quality products at affordable prices!(Java Script)</i><br><br>
               <a href="https://vinod-makkala77.github.io/mystorejs/" style="color: red;"><i><div class="hov"> CLICK HERE</div></i></a>
             </p>
           </div>
@@ -75,7 +76,7 @@
       <div id="services" class="row" style="background-color: lightblue">
         <h1>Services</h1>
         <div style="display: flex">
-          <div class="box">
+          <div class="box about">
             <h3>Web App Development</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
@@ -85,7 +86,7 @@
             </p>
           </div>
 
-          <div class="box">
+          <div class="box about">
             <h3>Mobile App Development</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
@@ -95,7 +96,7 @@
             </p>
           </div>
 
-          <div class="box">
+          <div class="box about">
             <h3>Backend Development</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
@@ -106,17 +107,20 @@
           </div>
         </div>
       </div>
-      <div id="about" class="row">
+      <div id="about" class="row about">
         <h1>About</h1>
-        <h3>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere sint
-          optio labore a obcaecati. Ullam distinctio corrupti autem. Veritatis
-          ipsa veniam deserunt asperiores nesciunt at provident itaque
-          cupiditate vel dolor.
-        </h3>
+        <p><i>
+          Beyond development, I have a keen interest in AI and machine learning, particularly in career recommendation systems and gesture recognition technologies. I have worked on innovative projects like EduGenius, an AI-driven content generation tool, and a hand gesture-based safety alert system.
+
+I am always eager to explore new technologies, contribute to impactful projects, and solve real-world problems through tech.
+       </i> </p>
         <h2>Skills</h2>
-        <h3>Java, Python, Reactjs</h3>
-        <p>Display the logo of all the technologies you know.</p>
+        
+       <div class="divide">
+        <img src="assets/images/java.png" width="150px" height="150px" style="border-radius: 30%;">
+        <img src="assets/images/python.jpeg" width="150px" height="150px" style="border-radius: 30%;">
+        <img src="assets/images/react.png" width="150px" height="150px" style="border-radius: 30%;">
+      </div>
       </div>
       <div
         id="contact"
@@ -138,22 +142,23 @@
              <p>
               <textarea rows="10" cols="60" placeholder="Enter message"></textarea>
              </p>
-             <button>Send</button>
+             <button >Send</button>
           </div>
 
           <div class="box">
-            <h3>Your/Company Name</h3>
+            <h3>Vinod Makkala</h3>
             <p>
-              <b>Address: </b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-              quia nobis eligendi reiciendis. Esse a possimus eum est veritatis
-              aliquid ut eveniet. Et illum odio ut voluptates molestiae?
-              Perspiciatis, ab.
+              <b>Address: </b>Srinidhi boys hostel ,oppo nestin pg 120 c
+              Addagutta society,street n.o 4 ,kphb
+              HYDERABAD, TELANGANA 500085
+              India
+             
             </p>
             <p>
-              <b>Email Address: </b>sample@email.com
+              <b>Email Address: </b>makkalavinod70@gmail.com
             </p>
             <p>
-              <b>Phone Number: </b>+91 343 445 6789
+              <b>Phone Number: </b>+91 630 518 3585
             </p>
           </div>
         </div>
