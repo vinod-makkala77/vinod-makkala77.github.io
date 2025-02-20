@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <img src="assets/images/ball.png" id="ball" style="width: 200px;height: 200px;">
+</div>
+</body>
+<script>
+      ball.style.position="absolute";
+//     ball.style.top="2000px";
+//     ball.style.left="100px"
+let t=0;
+function f1(){
+    t++;
+    ball.style.top=t+"px";
+    if(t<500){
+    setTimeout(f1,100);
+    }
+}
+
+f1();
+</script>
+</html>
