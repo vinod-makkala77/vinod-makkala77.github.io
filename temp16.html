@@ -7,8 +7,11 @@
     <script>
         function f1(event) {
             event.preventDefault(); 
-            let n = document.getElementById("n1").value;
-            let m = document.getElementById("n2").value;
+           // let n = document.querySelectorAll("input");
+          // let n = document.querySelectorAll(".nai");
+            let n=document.getElementsByTagName("input");
+            console.log((n[1].value).length)
+            let m = document.querySelector("#n2").value;
             document.getElementById("msg").innerHTML = `Email: ${n}, Password: ${m}`;
         }
     </script>
@@ -19,6 +22,9 @@
             align-items: center;
             height: 100vh;
             background-color: #f4f4f4;
+        }
+        .nai{
+            background-color: antiquewhite;
         }
 
         .head {
@@ -62,7 +68,7 @@
 <body>
     <div class="head">
         <form onsubmit="f1(event)">
-            <input type="text" placeholder="Enter the email" required id="n1">
+            <input type="text"  class="nai" placeholder="Enter the email" required id="n1">
             <input type="password" placeholder="Password" required id="n2">
             <button type="submit">Log In</button>
         </form>
